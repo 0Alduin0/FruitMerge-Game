@@ -3,6 +3,10 @@ using UnityEngine;
 
 public class Merge : MonoBehaviour
 {
+
+    
+
+    [SerializeField] private GameObject apple;
     [SerializeField] private GameObject banana;
     [SerializeField] private GameObject blueberry;
     [SerializeField] private GameObject grapes;
@@ -12,7 +16,22 @@ public class Merge : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.transform.CompareTag("Apple") && gameObject.tag == "Apple")
+        if (collision.transform.CompareTag("Blueberry") && gameObject.tag == "Blueberry")
+        {
+            if (gameObject.GetInstanceID() < collision.gameObject.GetInstanceID())
+            {
+                Vector2 firstFruit = transform.position;
+                Vector2 secondFruit = collision.transform.position;
+                Vector2 pozisyon = (firstFruit + secondFruit) / 2;
+
+                Destroy(collision.gameObject);
+                Destroy(gameObject);
+
+                Instantiate(grapes, pozisyon, Quaternion.identity);
+            }
+        }
+
+        if (collision.transform.CompareTag("Grapes") && gameObject.tag == "Grapes")
         {
             if (gameObject.GetInstanceID() < collision.gameObject.GetInstanceID())
             {
@@ -38,26 +57,12 @@ public class Merge : MonoBehaviour
                 Destroy(collision.gameObject);
                 Destroy(gameObject);
 
-                Instantiate(blueberry, pozisyon, Quaternion.identity);
+                Instantiate(apple, pozisyon, Quaternion.identity);
             }
         }
 
-        if (collision.transform.CompareTag("Blueberry") && gameObject.tag == "Blueberry")
-        {
-            if (gameObject.GetInstanceID() < collision.gameObject.GetInstanceID())
-            {
-                Vector2 firstFruit = transform.position;
-                Vector2 secondFruit = collision.transform.position;
-                Vector2 pozisyon = (firstFruit + secondFruit) / 2;
 
-                Destroy(collision.gameObject);
-                Destroy(gameObject);
-
-                Instantiate(grapes, pozisyon, Quaternion.identity);
-            }
-        }
-
-        if (collision.transform.CompareTag("Grapes") && gameObject.tag == "Grapes")
+        if (collision.transform.CompareTag("Apple") && gameObject.tag == "Apple")
         {
             if (gameObject.GetInstanceID() < collision.gameObject.GetInstanceID())
             {
@@ -99,6 +104,16 @@ public class Merge : MonoBehaviour
                 Destroy(gameObject);
 
                 Instantiate(strawberry, pozisyon, Quaternion.identity);
+            }
+        }
+
+        if (collision.transform.CompareTag("Strawberry") && gameObject.tag == "Strawberry")
+        {
+            if (gameObject.GetInstanceID() < collision.gameObject.GetInstanceID())
+            {
+                Destroy(collision.gameObject);
+                Destroy(gameObject);
+
             }
         }
     }

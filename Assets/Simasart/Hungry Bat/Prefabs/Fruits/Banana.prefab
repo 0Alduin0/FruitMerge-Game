@@ -22,11 +22,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1393836645415585426, guid: 6681822d38bb9f74ca0f397bbf767f5a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.9095868
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1393836645415585426, guid: 6681822d38bb9f74ca0f397bbf767f5a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.2003574
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1393836645415585426, guid: 6681822d38bb9f74ca0f397bbf767f5a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -158,6 +158,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5135ef7248463b4a9955b604a326f7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  apple: {fileID: 9003223963689281457, guid: dcfa150433e47994ebf8b1bc2346b4f9, type: 3}
   banana: {fileID: 6849145136739177961}
   blueberry: {fileID: 5360176583839675055, guid: 1977995712407c04a9f16047a8d9552e, type: 3}
   grapes: {fileID: 5654466434300138898, guid: e604a0a06f0ad2f4588b7a1127b77381, type: 3}
