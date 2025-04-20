@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 23fc5a063bf1f5944a635c0281e062ab
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 229197
+  packageName: Hungry Bat - Match 3 UI
+  packageVersion: 1.0
+  assetPath: Assets/Simasart/Hungry Bat/Prefabs/Popups/PausePopup.prefab
+  uploadId: 517349

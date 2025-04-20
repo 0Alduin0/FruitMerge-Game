@@ -1,0 +1,162 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &8045125983974515004
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1393836645415585421, guid: 6681822d38bb9f74ca0f397bbf767f5a, type: 3}
+      propertyPath: m_Name
+      value: Apple
+      objectReference: {fileID: 0}
+    - target: {fileID: 1393836645415585421, guid: 6681822d38bb9f74ca0f397bbf767f5a, type: 3}
+      propertyPath: m_TagString
+      value: Apple
+      objectReference: {fileID: 0}
+    - target: {fileID: 1393836645415585426, guid: 6681822d38bb9f74ca0f397bbf767f5a, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1393836645415585426, guid: 6681822d38bb9f74ca0f397bbf767f5a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.454941
+      objectReference: {fileID: 0}
+    - target: {fileID: 1393836645415585426, guid: 6681822d38bb9f74ca0f397bbf767f5a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.4937127
+      objectReference: {fileID: 0}
+    - target: {fileID: 1393836645415585426, guid: 6681822d38bb9f74ca0f397bbf767f5a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1393836645415585426, guid: 6681822d38bb9f74ca0f397bbf767f5a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1393836645415585426, guid: 6681822d38bb9f74ca0f397bbf767f5a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1393836645415585426, guid: 6681822d38bb9f74ca0f397bbf767f5a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1393836645415585426, guid: 6681822d38bb9f74ca0f397bbf767f5a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1393836645415585426, guid: 6681822d38bb9f74ca0f397bbf767f5a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1393836645415585426, guid: 6681822d38bb9f74ca0f397bbf767f5a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1393836645415585426, guid: 6681822d38bb9f74ca0f397bbf767f5a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1393836645415585421, guid: 6681822d38bb9f74ca0f397bbf767f5a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8234834383058470993}
+    - targetCorrespondingSourceObject: {fileID: 1393836645415585421, guid: 6681822d38bb9f74ca0f397bbf767f5a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7464959284722295099}
+    - targetCorrespondingSourceObject: {fileID: 1393836645415585421, guid: 6681822d38bb9f74ca0f397bbf767f5a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 476609209712583106}
+  m_SourcePrefab: {fileID: 100100000, guid: 6681822d38bb9f74ca0f397bbf767f5a, type: 3}
+--- !u!1 &9003223963689281457 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1393836645415585421, guid: 6681822d38bb9f74ca0f397bbf767f5a, type: 3}
+  m_PrefabInstance: {fileID: 8045125983974515004}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8234834383058470993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9003223963689281457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5135ef7248463b4a9955b604a326f7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  banana: {fileID: 6849145136739177961, guid: 1f9bc2baa3eecbe48aaac571067bd966, type: 3}
+  blueberry: {fileID: 5360176583839675055, guid: 1977995712407c04a9f16047a8d9552e, type: 3}
+  grapes: {fileID: 5654466434300138898, guid: e604a0a06f0ad2f4588b7a1127b77381, type: 3}
+  orange: {fileID: 5182403206852857962, guid: b06ad6d962700de40a25e00ccd3b09c8, type: 3}
+  pear: {fileID: 5076765230915325859, guid: fe78d4afa3f68664fa71adf376f4aea6, type: 3}
+  strawberry: {fileID: 2705507177751519838, guid: 06e4910d9238ddb418ce390133ed7724, type: 3}
+--- !u!50 &7464959284722295099
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9003223963689281457}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!58 &476609209712583106
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9003223963689281457}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Radius: 0.5

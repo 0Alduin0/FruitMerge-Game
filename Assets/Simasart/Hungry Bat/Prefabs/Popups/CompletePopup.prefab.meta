@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: c1b5547c8c16c374799866935b19b344
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 229197
+  packageName: Hungry Bat - Match 3 UI
+  packageVersion: 1.0
+  assetPath: Assets/Simasart/Hungry Bat/Prefabs/Popups/CompletePopup.prefab
+  uploadId: 517349
