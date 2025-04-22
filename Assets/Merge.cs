@@ -26,12 +26,12 @@ public class Merge : MonoBehaviour
             {
                 Vector2 firstFruit = transform.position;
                 Vector2 secondFruit = collision.transform.position;
-                Vector2 pozisyon = (firstFruit + secondFruit) / 2;
+                Vector2 pozition = (firstFruit + secondFruit) / 2;
 
                 Destroy(collision.gameObject);
                 Destroy(gameObject);
 
-                Instantiate(grapes, pozisyon, Quaternion.identity);
+                Instantiate(grapes, pozition, Quaternion.identity);
             }
         }
 
@@ -42,12 +42,12 @@ public class Merge : MonoBehaviour
             {
                 Vector2 firstFruit = transform.position;
                 Vector2 secondFruit = collision.transform.position;
-                Vector2 pozisyon = (firstFruit + secondFruit) / 2;
+                Vector2 pozition = (firstFruit + secondFruit) / 2;
 
                 Destroy(collision.gameObject);
                 Destroy(gameObject);
 
-                Instantiate(banana, pozisyon, Quaternion.identity);
+                Instantiate(banana, pozition, Quaternion.identity);
             }
         }
 
@@ -58,12 +58,12 @@ public class Merge : MonoBehaviour
             {
                 Vector2 firstFruit = transform.position;
                 Vector2 secondFruit = collision.transform.position;
-                Vector2 pozisyon = (firstFruit + secondFruit) / 2;
+                Vector2 pozition = (firstFruit + secondFruit) / 2;
 
                 Destroy(collision.gameObject);
                 Destroy(gameObject);
 
-                Instantiate(apple, pozisyon, Quaternion.identity);
+                Instantiate(apple, pozition, Quaternion.identity);
             }
         }
 
@@ -74,12 +74,12 @@ public class Merge : MonoBehaviour
             {
                 Vector2 firstFruit = transform.position;
                 Vector2 secondFruit = collision.transform.position;
-                Vector2 pozisyon = (firstFruit + secondFruit) / 2;
+                Vector2 pozition = (firstFruit + secondFruit) / 2;
 
                 Destroy(collision.gameObject);
                 Destroy(gameObject);
 
-                Instantiate(orange, pozisyon, Quaternion.identity);
+                Instantiate(orange, pozition, Quaternion.identity);
             }
         }
 
@@ -90,12 +90,12 @@ public class Merge : MonoBehaviour
             {
                 Vector2 firstFruit = transform.position;
                 Vector2 secondFruit = collision.transform.position;
-                Vector2 pozisyon = (firstFruit + secondFruit) / 2;
+                Vector2 pozition = (firstFruit + secondFruit) / 2;
 
                 Destroy(collision.gameObject);
                 Destroy(gameObject);
 
-                Instantiate(pear, pozisyon, Quaternion.identity);
+                Instantiate(pear, pozition, Quaternion.identity);
             }
         }
 
@@ -106,12 +106,12 @@ public class Merge : MonoBehaviour
             {
                 Vector2 firstFruit = transform.position;
                 Vector2 secondFruit = collision.transform.position;
-                Vector2 pozisyon = (firstFruit + secondFruit) / 2;
+                Vector2 pozition = (firstFruit + secondFruit) / 2;
 
                 Destroy(collision.gameObject);
                 Destroy(gameObject);
 
-                Instantiate(strawberry, pozisyon, Quaternion.identity);
+                Instantiate(strawberry, pozition, Quaternion.identity);
             }
         }
 
