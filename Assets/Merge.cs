@@ -1,133 +1,56 @@
-using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Merge : MonoBehaviour
 {
-    public float score;
+    [SerializeField] private GameObject[] fruitPrefabs; // Sýralý: Blueberry, Grapes, Banana, Apple, Orange, Pear, Strawberry
+
+    private Dictionary<string, GameObject> mergeHierarchy;
+    ScoreManagement scoreManagement;
+
     private void Start()
     {
-        score = 0;
+        InitializeMergeHierarchy();
+        scoreManagement = new ScoreManagement();
     }
-
-    [SerializeField] private GameObject apple;
-    [SerializeField] private GameObject banana;
-    [SerializeField] private GameObject blueberry;
-    [SerializeField] private GameObject grapes;
-    [SerializeField] private GameObject orange;
-    [SerializeField] private GameObject pear;
-    [SerializeField] private GameObject strawberry;
+    private void Update()
+    {
+        scoreManagement.Instance.score += 100;
+    }
+    private void InitializeMergeHierarchy()
+    {
+        mergeHierarchy = new Dictionary<string, GameObject>()
+        {
+            {"Blueberry", fruitPrefabs[1]},    // Blueberry -> Grapes
+            {"Grapes", fruitPrefabs[2]},       // Grapes -> Banana
+            {"Banana", fruitPrefabs[3]},      // Banana -> Apple
+            {"Apple", fruitPrefabs[4]},       // Apple -> Orange
+            {"Orange", fruitPrefabs[5]},       // Orange -> Pear
+            {"Pear", fruitPrefabs[6]},        // Pear -> Strawberry
+            {"Strawberry", null}             // Strawberry'nin sonrasý yok
+        };
+    }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.transform.CompareTag("Blueberry") && gameObject.tag == "Blueberry")
+        string currentTag = gameObject.tag;
+        string otherTag = collision.gameObject.tag;
+
+        if (currentTag == otherTag && mergeHierarchy.ContainsKey(currentTag))
         {
-            score = score + 100;
             if (gameObject.GetInstanceID() < collision.gameObject.GetInstanceID())
             {
-                Vector2 firstFruit = transform.position;
-                Vector2 secondFruit = collision.transform.position;
-                Vector2 pozition = (firstFruit + secondFruit) / 2;
+                Vector2 mergePosition = (transform.position + collision.transform.position) / 2;
 
                 Destroy(collision.gameObject);
                 Destroy(gameObject);
 
-                Instantiate(grapes, pozition, Quaternion.identity);
+                GameObject nextFruit = mergeHierarchy[currentTag];
+                if (nextFruit != null)
+                {
+                    Instantiate(nextFruit, mergePosition, Quaternion.identity);
+                }
             }
         }
-
-        if (collision.transform.CompareTag("Grapes") && gameObject.tag == "Grapes")
-        {
-            score = score + 100;
-            if (gameObject.GetInstanceID() < collision.gameObject.GetInstanceID())
-            {
-                Vector2 firstFruit = transform.position;
-                Vector2 secondFruit = collision.transform.position;
-                Vector2 pozition = (firstFruit + secondFruit) / 2;
-
-                Destroy(collision.gameObject);
-                Destroy(gameObject);
-
-                Instantiate(banana, pozition, Quaternion.identity);
-            }
-        }
-
-        if (collision.transform.CompareTag("Banana") && gameObject.tag == "Banana")
-        {
-            score = score + 100;
-            if (gameObject.GetInstanceID() < collision.gameObject.GetInstanceID())
-            {
-                Vector2 firstFruit = transform.position;
-                Vector2 secondFruit = collision.transform.position;
-                Vector2 pozition = (firstFruit + secondFruit) / 2;
-
-                Destroy(collision.gameObject);
-                Destroy(gameObject);
-
-                Instantiate(apple, pozition, Quaternion.identity);
-            }
-        }
-
-        if (collision.transform.CompareTag("Apple") && gameObject.tag == "Apple")
-        {
-            score = score + 100;
-            if (gameObject.GetInstanceID() < collision.gameObject.GetInstanceID())
-            {
-                Vector2 firstFruit = transform.position;
-                Vector2 secondFruit = collision.transform.position;
-                Vector2 pozition = (firstFruit + secondFruit) / 2;
-
-                Destroy(collision.gameObject);
-                Destroy(gameObject);
-
-                Instantiate(orange, pozition, Quaternion.identity);
-            }
-        }
-
-        if (collision.transform.CompareTag("Orange") && gameObject.tag == "Orange")
-        {
-            score = score + 100;
-            if (gameObject.GetInstanceID() < collision.gameObject.GetInstanceID())
-            {
-                Vector2 firstFruit = transform.position;
-                Vector2 secondFruit = collision.transform.position;
-                Vector2 pozition = (firstFruit + secondFruit) / 2;
-
-                Destroy(collision.gameObject);
-                Destroy(gameObject);
-
-                Instantiate(pear, pozition, Quaternion.identity);
-            }
-        }
-
-        if (collision.transform.CompareTag("Pear") && gameObject.tag == "Pear")
-        {
-            score = score + 100;
-            if (gameObject.GetInstanceID() < collision.gameObject.GetInstanceID())
-            {
-                Vector2 firstFruit = transform.position;
-                Vector2 secondFruit = collision.transform.position;
-                Vector2 pozition = (firstFruit + secondFruit) / 2;
-
-                Destroy(collision.gameObject);
-                Destroy(gameObject);
-
-                Instantiate(strawberry, pozition, Quaternion.identity);
-            }
-        }
-
-        if (collision.transform.CompareTag("Strawberry") && gameObject.tag == "Strawberry")
-        {
-            score = score + 100;
-            if (gameObject.GetInstanceID() < collision.gameObject.GetInstanceID())
-            {
-                Destroy(collision.gameObject);
-                Destroy(gameObject);
-            }
-        }
-    }
-
-    private void Update()
-    {
-        print(score);
     }
 }
