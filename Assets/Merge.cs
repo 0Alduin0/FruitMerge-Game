@@ -3,8 +3,11 @@ using UnityEngine;
 
 public class Merge : MonoBehaviour
 {
-
-    
+    public float score;
+    private void Start()
+    {
+        score = 0;
+    }
 
     [SerializeField] private GameObject apple;
     [SerializeField] private GameObject banana;
@@ -18,6 +21,7 @@ public class Merge : MonoBehaviour
     {
         if (collision.transform.CompareTag("Blueberry") && gameObject.tag == "Blueberry")
         {
+            score = score + 100;
             if (gameObject.GetInstanceID() < collision.gameObject.GetInstanceID())
             {
                 Vector2 firstFruit = transform.position;
@@ -33,6 +37,7 @@ public class Merge : MonoBehaviour
 
         if (collision.transform.CompareTag("Grapes") && gameObject.tag == "Grapes")
         {
+            score = score + 100;
             if (gameObject.GetInstanceID() < collision.gameObject.GetInstanceID())
             {
                 Vector2 firstFruit = transform.position;
@@ -48,6 +53,7 @@ public class Merge : MonoBehaviour
 
         if (collision.transform.CompareTag("Banana") && gameObject.tag == "Banana")
         {
+            score = score + 100;
             if (gameObject.GetInstanceID() < collision.gameObject.GetInstanceID())
             {
                 Vector2 firstFruit = transform.position;
@@ -61,9 +67,9 @@ public class Merge : MonoBehaviour
             }
         }
 
-
         if (collision.transform.CompareTag("Apple") && gameObject.tag == "Apple")
         {
+            score = score + 100;
             if (gameObject.GetInstanceID() < collision.gameObject.GetInstanceID())
             {
                 Vector2 firstFruit = transform.position;
@@ -79,6 +85,7 @@ public class Merge : MonoBehaviour
 
         if (collision.transform.CompareTag("Orange") && gameObject.tag == "Orange")
         {
+            score = score + 100;
             if (gameObject.GetInstanceID() < collision.gameObject.GetInstanceID())
             {
                 Vector2 firstFruit = transform.position;
@@ -94,6 +101,7 @@ public class Merge : MonoBehaviour
 
         if (collision.transform.CompareTag("Pear") && gameObject.tag == "Pear")
         {
+            score = score + 100;
             if (gameObject.GetInstanceID() < collision.gameObject.GetInstanceID())
             {
                 Vector2 firstFruit = transform.position;
@@ -109,14 +117,17 @@ public class Merge : MonoBehaviour
 
         if (collision.transform.CompareTag("Strawberry") && gameObject.tag == "Strawberry")
         {
+            score = score + 100;
             if (gameObject.GetInstanceID() < collision.gameObject.GetInstanceID())
             {
                 Destroy(collision.gameObject);
                 Destroy(gameObject);
-
             }
         }
     }
 
-
+    private void Update()
+    {
+        print(score);
+    }
 }
