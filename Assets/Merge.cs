@@ -35,7 +35,7 @@ public class Merge : MonoBehaviour
             {
                 Vector2 mergePosition = (transform.position + collision.transform.position) / 2;
 
-                ScoreManagement.Instance.score += 100;
+                ScoreManagement.Instance.AddScore(gameObject.tag);
 
                 Destroy(collision.gameObject);
                 Destroy(gameObject);
