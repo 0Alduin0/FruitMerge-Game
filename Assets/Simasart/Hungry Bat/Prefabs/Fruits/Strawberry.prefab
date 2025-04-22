@@ -21,12 +21,24 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1393836645415585426, guid: 6681822d38bb9f74ca0f397bbf767f5a, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1393836645415585426, guid: 6681822d38bb9f74ca0f397bbf767f5a, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1393836645415585426, guid: 6681822d38bb9f74ca0f397bbf767f5a, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1393836645415585426, guid: 6681822d38bb9f74ca0f397bbf767f5a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 1.5647591
       objectReference: {fileID: 0}
     - target: {fileID: 1393836645415585426, guid: 6681822d38bb9f74ca0f397bbf767f5a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -1.696295
       objectReference: {fileID: 0}
     - target: {fileID: 1393836645415585426, guid: 6681822d38bb9f74ca0f397bbf767f5a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -59,6 +71,10 @@ PrefabInstance:
     - target: {fileID: 1393836645415585426, guid: 6681822d38bb9f74ca0f397bbf767f5a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1393836645415585426, guid: 6681822d38bb9f74ca0f397bbf767f5a, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1393836646070208606, guid: 6681822d38bb9f74ca0f397bbf767f5a, type: 3}
       propertyPath: m_Sprite
@@ -95,6 +111,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5135ef7248463b4a9955b604a326f7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  score: 0
   apple: {fileID: 9003223963689281457, guid: dcfa150433e47994ebf8b1bc2346b4f9, type: 3}
   banana: {fileID: 6849145136739177961, guid: 1f9bc2baa3eecbe48aaac571067bd966, type: 3}
   blueberry: {fileID: 5360176583839675055, guid: 1977995712407c04a9f16047a8d9552e, type: 3}
