@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class ScoreManagement : MonoBehaviour
 {
-    public ScoreManagement Instance;
+    public static ScoreManagement Instance;
     public float score = 0;
 
     private void Awake()

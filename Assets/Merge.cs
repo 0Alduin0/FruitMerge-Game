@@ -6,16 +6,9 @@ public class Merge : MonoBehaviour
     [SerializeField] private GameObject[] fruitPrefabs; // Sýralý: Blueberry, Grapes, Banana, Apple, Orange, Pear, Strawberry
 
     private Dictionary<string, GameObject> mergeHierarchy;
-    ScoreManagement scoreManagement;
-
     private void Start()
     {
         InitializeMergeHierarchy();
-        scoreManagement = new ScoreManagement();
-    }
-    private void Update()
-    {
-        scoreManagement.Instance.score += 100;
     }
     private void InitializeMergeHierarchy()
     {
@@ -41,6 +34,8 @@ public class Merge : MonoBehaviour
             if (gameObject.GetInstanceID() < collision.gameObject.GetInstanceID())
             {
                 Vector2 mergePosition = (transform.position + collision.transform.position) / 2;
+
+                ScoreManagement.Instance.score += 100;
 
                 Destroy(collision.gameObject);
                 Destroy(gameObject);
