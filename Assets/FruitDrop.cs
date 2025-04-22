@@ -67,6 +67,6 @@ public class FruitDrop : MonoBehaviour
         currentFruit = null;
 
         // Yeni meyve için bekle
-        Invoke("SpawnNewFruit", 0.5f);
+        Invoke("SpawnNewFruit", 1f);
     }
 }

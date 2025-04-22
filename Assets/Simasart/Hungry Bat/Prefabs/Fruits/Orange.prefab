@@ -111,7 +111,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5135ef7248463b4a9955b604a326f7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: 0
   fruitPrefabs:
   - {fileID: 5360176583839675055, guid: 1977995712407c04a9f16047a8d9552e, type: 3}
   - {fileID: 5654466434300138898, guid: e604a0a06f0ad2f4588b7a1127b77381, type: 3}
@@ -181,5 +180,5 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_Radius: 0.5
+  m_Offset: {x: 0.01083903, y: -0.012024865}
+  m_Radius: 0.42582855
