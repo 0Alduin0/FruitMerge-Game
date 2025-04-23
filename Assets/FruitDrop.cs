@@ -1,14 +1,21 @@
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class FruitDrop : MonoBehaviour
 {
-  
-    public List<GameObject> fruitPrefabs; // Farklý meyve prefab'larý
-    public float dropHeight = 5f; // Meyvenin düþme yüksekliði
+    [System.Serializable] // Inspector'da görünebilir hale getirir
+    public class WeightedFruit
+    {
+        public GameObject fruitPrefab;
+        public float spawnWeight; // Spawn olasýlýðýný belirler (örneðin: elma=5, çilek=1)
+    }
 
-    private GameObject currentFruit; // Þu anki kontrol edilen meyve
+    public List<WeightedFruit> weightedFruits; // Aðýrlýklý meyve listesi
+    public float dropHeight = 5f;
+    public float leftBoundary = -5f;
+    public float rightBoundary = 5f;
+
+    private GameObject currentFruit;
     private Camera mainCamera;
     private bool canDrop = true;
 
@@ -22,15 +29,13 @@ public class FruitDrop : MonoBehaviour
     {
         if (currentFruit != null)
         {
-            // Fare pozisyonunu takip et
             Vector3 mousePosition = Input.mousePosition;
-            mousePosition.z = 10f; // Kameradan uzaklýk
+            mousePosition.z = 10f;
             Vector3 worldPosition = mainCamera.ScreenToWorldPoint(mousePosition);
 
-            // Meyveyi fare ile hareket ettir (sadece x ekseninde)
-            currentFruit.transform.position = new Vector3(worldPosition.x, currentFruit.transform.position.y, 0f);
+            float clampedX = Mathf.Clamp(worldPosition.x, leftBoundary, rightBoundary);
+            currentFruit.transform.position = new Vector3(clampedX, currentFruit.transform.position.y, 0f);
 
-            // Sol týkla meyveyi býrak
             if (Input.GetMouseButtonDown(0) && canDrop)
             {
                 DropFruit();
@@ -40,24 +45,49 @@ public class FruitDrop : MonoBehaviour
 
     void SpawnNewFruit()
     {
-        if (fruitPrefabs.Count == 0) return;
+        if (weightedFruits.Count == 0) return;
 
-        // Rastgele bir meyve seç
-        int randomIndex = Random.Range(0, fruitPrefabs.Count);
-        GameObject fruitPrefab = fruitPrefabs[randomIndex];
+        // Toplam aðýrlýðý hesapla
+        float totalWeight = 0f;
+        foreach (var weightedFruit in weightedFruits)
+        {
+            totalWeight += weightedFruit.spawnWeight;
+        }
 
-        // Fare pozisyonunda yeni meyve oluþtur
+        // Rastgele bir deðer seç (0 ile totalWeight arasýnda)
+        float randomValue = Random.Range(0f, totalWeight);
+        float weightSum = 0f;
+
+        GameObject selectedFruit = null;
+
+        // Hangi meyvenin seçileceðini belirle
+        foreach (var weightedFruit in weightedFruits)
+        {
+            weightSum += weightedFruit.spawnWeight;
+            if (randomValue <= weightSum)
+            {
+                selectedFruit = weightedFruit.fruitPrefab;
+                break;
+            }
+        }
+
+        if (selectedFruit == null)
+        {
+            selectedFruit = weightedFruits[0].fruitPrefab; // Fallback
+        }
+
+        // Yeni meyveyi oluþtur
         Vector3 spawnPosition = mainCamera.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 10f));
         spawnPosition.y = dropHeight;
+        spawnPosition.x = Mathf.Clamp(spawnPosition.x, leftBoundary, rightBoundary);
 
-        currentFruit = Instantiate(fruitPrefab, spawnPosition, Quaternion.identity);
+        currentFruit = Instantiate(selectedFruit, spawnPosition, Quaternion.identity);
         currentFruit.GetComponent<Rigidbody2D>().gravityScale = 0f;
         canDrop = true;
     }
 
     void DropFruit()
     {
-        // Yerçekimi etkinleþtir
         if (currentFruit.GetComponent<Rigidbody2D>() != null)
         {
             currentFruit.GetComponent<Rigidbody2D>().gravityScale = 1f;
@@ -65,8 +95,6 @@ public class FruitDrop : MonoBehaviour
 
         canDrop = false;
         currentFruit = null;
-
-        // Yeni meyve için bekle
         Invoke("SpawnNewFruit", 1f);
     }
 }
