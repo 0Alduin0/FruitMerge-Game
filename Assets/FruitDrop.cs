@@ -90,11 +90,11 @@ public class FruitDrop : MonoBehaviour
     {
         if (currentFruit.GetComponent<Rigidbody2D>() != null)
         {
-            currentFruit.GetComponent<Rigidbody2D>().gravityScale = 1f;
+            currentFruit.GetComponent<Rigidbody2D>().gravityScale = 2f;
         }
 
         canDrop = false;
         currentFruit = null;
-        Invoke("SpawnNewFruit", 1f);
+        Invoke("SpawnNewFruit", 0.5f);
     }
 }
