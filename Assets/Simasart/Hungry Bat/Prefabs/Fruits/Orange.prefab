@@ -92,7 +92,7 @@ PrefabInstance:
       addedObject: {fileID: -7626636726179590658}
     - targetCorrespondingSourceObject: {fileID: 1393836645415585421, guid: 6681822d38bb9f74ca0f397bbf767f5a, type: 3}
       insertIndex: -1
-      addedObject: {fileID: -4304338584839150113}
+      addedObject: {fileID: 1047927868393578960}
   m_SourcePrefab: {fileID: 100100000, guid: 6681822d38bb9f74ca0f397bbf767f5a, type: 3}
 --- !u!1 &5182403206852857962 stripped
 GameObject:
@@ -146,8 +146,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!58 &-4304338584839150113
-CircleCollider2D:
+--- !u!68 &1047927868393578960
+EdgeCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -180,5 +180,39 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.01083903, y: -0.012024865}
-  m_Radius: 0.42582855
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -0.34222633, y: 0.2171507}
+  - {x: -0.4102426, y: 0.3367165}
+  - {x: -0.40577033, y: 0.38278362}
+  - {x: -0.35811794, y: 0.41214827}
+  - {x: -0.30019376, y: 0.41955146}
+  - {x: -0.17485377, y: 0.4149186}
+  - {x: -0.10013538, y: 0.3919273}
+  - {x: -0.020400262, y: 0.40537873}
+  - {x: 0.09467098, y: 0.3978862}
+  - {x: 0.19827875, y: 0.36180842}
+  - {x: 0.29778394, y: 0.29112738}
+  - {x: 0.35288757, y: 0.2284681}
+  - {x: 0.41002673, y: 0.114068985}
+  - {x: 0.42420635, y: 0.045794208}
+  - {x: 0.42483747, y: -0.07517993}
+  - {x: 0.3842905, y: -0.19820127}
+  - {x: 0.33309668, y: -0.27927488}
+  - {x: 0.24890888, y: -0.35718462}
+  - {x: 0.14936905, y: -0.40422198}
+  - {x: 0.051032633, y: -0.42901447}
+  - {x: -0.04748288, y: -0.42593879}
+  - {x: -0.14554745, y: -0.40189335}
+  - {x: -0.24265462, y: -0.3502098}
+  - {x: -0.31824556, y: -0.27600288}
+  - {x: -0.38290852, y: -0.16696364}
+  - {x: -0.4101209, y: -0.017261034}
+  - {x: -0.41255432, y: 0.036802907}
+  - {x: -0.383182, y: 0.14221025}
+  - {x: -0.3412592, y: 0.21824807}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
