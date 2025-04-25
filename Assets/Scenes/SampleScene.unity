@@ -588,7 +588,7 @@ MonoBehaviour:
   musicSource: {fileID: 1560279809}
   SFXSource: {fileID: 1055972163}
   background: {fileID: 8300000, guid: 2309e780c9191d141ac4085c80ab9563, type: 3}
-  mergeSFX: {fileID: 8300000, guid: 2c039bd9e2cb86c41b1169a053571407, type: 3}
+  mergeSFX: {fileID: 8300000, guid: 971287a9f15b7334287c1068106ba4c9, type: 3}
 --- !u!4 &1081629461
 Transform:
   m_ObjectHideFlags: 0
