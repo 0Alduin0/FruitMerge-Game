@@ -50,7 +50,6 @@ public class FruitBorderControl : MonoBehaviour
             if (mevcutSayac <= 0)
             {
                 Debug.Log("sayaç 0 oldu");
-                Time.timeScale = 0f;
             }
         }
     }
