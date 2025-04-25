@@ -15,7 +15,7 @@ public class FruitBorderControl : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (!sayacAktif)
+        if (sayacAktif == false)
         {
             temasEdenMeyve = other.gameObject;
             sayacAktif = true;
@@ -50,7 +50,7 @@ public class FruitBorderControl : MonoBehaviour
             if (mevcutSayac <= 0)
             {
                 Debug.Log("sayaç 0 oldu");
-                SayaciSifirla();
+                Time.timeScale = 0f;
             }
         }
     }
