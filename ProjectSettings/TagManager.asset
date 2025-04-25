@@ -5,12 +5,14 @@ TagManager:
   serializedVersion: 3
   tags:
   - Apple
-  - Banana
   - Grapes
   - Orange
-  - Pear
   - Strawberry
-  - Blueberry
+  - Coconut
+  - Lemon
+  - Peach
+  - Plum
+  - Watermelon
   - Audio
   layers:
   - Default
