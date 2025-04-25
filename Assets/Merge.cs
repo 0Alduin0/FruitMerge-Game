@@ -6,6 +6,8 @@ public class Merge : MonoBehaviour
     [SerializeField] private GameObject[] fruitPrefabs; // Sýralý: Blueberry, Grapes, Banana, Apple, Orange, Pear, Strawberry
 
     private Dictionary<string, GameObject> mergeHierarchy;
+
+    public GameObject mergeEffect;
     private void Start()
     {
         InitializeMergeHierarchy();
@@ -39,6 +41,7 @@ public class Merge : MonoBehaviour
 
                 Destroy(collision.gameObject);
                 Destroy(gameObject);
+                Instantiate(mergeEffect, mergePosition, Quaternion.identity);
 
                 GameObject nextFruit = mergeHierarchy[currentTag];
                 if (nextFruit != null)
