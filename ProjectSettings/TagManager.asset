@@ -11,6 +11,7 @@ TagManager:
   - Pear
   - Strawberry
   - Blueberry
+  - Audio
   layers:
   - Default
   - TransparentFX

@@ -8,6 +8,12 @@ public class Merge : MonoBehaviour
     private Dictionary<string, GameObject> mergeHierarchy;
 
     public GameObject mergeEffect;
+    public AudioManager audioManager;
+
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
     private void Start()
     {
         InitializeMergeHierarchy();
@@ -35,6 +41,8 @@ public class Merge : MonoBehaviour
         {
             if (gameObject.GetInstanceID() < collision.gameObject.GetInstanceID())
             {
+                audioManager.PlaySFX(audioManager.mergeSFX);
+
                 Vector2 mergePosition = (transform.position + collision.transform.position) / 2;
 
                 ScoreManagement.Instance.AddScore(gameObject.tag);
@@ -42,7 +50,6 @@ public class Merge : MonoBehaviour
                 Destroy(collision.gameObject);
                 Destroy(gameObject);
                 Instantiate(mergeEffect, mergePosition, Quaternion.identity);
-
                 GameObject nextFruit = mergeHierarchy[currentTag];
                 if (nextFruit != null)
                 {
