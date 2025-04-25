@@ -22,13 +22,15 @@ public class Merge : MonoBehaviour
     {
         mergeHierarchy = new Dictionary<string, GameObject>()
         {
-            {"Blueberry", fruitPrefabs[1]},    // Blueberry -> Grapes
-            {"Grapes", fruitPrefabs[2]},       // Grapes -> Banana
-            {"Banana", fruitPrefabs[3]},      // Banana -> Apple
-            {"Apple", fruitPrefabs[4]},       // Apple -> Orange
-            {"Orange", fruitPrefabs[5]},       // Orange -> Pear
-            {"Pear", fruitPrefabs[6]},        // Pear -> Strawberry
-            {"Strawberry", null}             // Strawberry'nin sonrasý yok
+            {"Plum", fruitPrefabs[1]},    // Blueberry -> Grapes
+            {"Strawberry", fruitPrefabs[2]},       // Grapes -> Banana
+            {"Grapes", fruitPrefabs[3]},      // Banana -> Apple
+            {"Lemon", fruitPrefabs[4]},       // Apple -> Orange
+            {"Apple", fruitPrefabs[5]},       // Orange -> Pear
+            {"Orange", fruitPrefabs[6]},        // Pear -> Strawberry
+            {"Peach", fruitPrefabs[7]},        // Pear -> Strawberry
+            {"Coconut", fruitPrefabs[8]},        // Pear -> Strawberry
+            {"Watermelon", null}        // Pear -> Strawberry
         };
     }
 

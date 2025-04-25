@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6134379823363281862}
   - component: {fileID: -5335678784039809055}
   - component: {fileID: -3528991860230583390}
+  - component: {fileID: 8870191168568908650}
   m_Layer: 0
   m_Name: Lemon
   m_TagString: Lemon
@@ -28,8 +29,8 @@ Transform:
   m_GameObject: {fileID: 6806420585747449944}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 18.064938, y: 3.0630803, z: 0}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.14, y: 0.14, z: 0.14}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -285,3 +286,27 @@ PolygonCollider2D:
       - {x: 0.305, y: -2.995}
       - {x: 0.39499998, y: -2.975}
   m_UseDelaunayMesh: 0
+--- !u!114 &8870191168568908650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6806420585747449944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5135ef7248463b4a9955b604a326f7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fruitPrefabs:
+  - {fileID: 7474140428821586315, guid: 34cf324f7110d064e845766d34113843, type: 3}
+  - {fileID: 795270983976498974, guid: 9a03434e3f926434ebcadee6234467b7, type: 3}
+  - {fileID: 5238422677304050410, guid: bc38c1ee781559c4ebe168e9b6d18069, type: 3}
+  - {fileID: 6806420585747449944}
+  - {fileID: 1318490503316927988, guid: fdd7ce7a83a093845b3b345177ae113a, type: 3}
+  - {fileID: 3519738657185712583, guid: 12c79f43df22057439cccbd90242369e, type: 3}
+  - {fileID: 1108877940479467221, guid: aa93c08d7b79e83499a7ce286d916f85, type: 3}
+  - {fileID: 3033737866546098009, guid: 3bc57d433a422944fa2094077e1e6cf4, type: 3}
+  - {fileID: 4745588449503523389, guid: e4a201462ef700e49b3676270813f586, type: 3}
+  mergeEffect: {fileID: 1405091850241023083, guid: 070938e3d30050f448406a1319a31ae4, type: 3}
+  audioManager: {fileID: 0}

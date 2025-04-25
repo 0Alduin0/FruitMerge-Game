@@ -1127,20 +1127,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weightedFruits:
-  - fruitPrefab: {fileID: 5360176583839675055, guid: 1977995712407c04a9f16047a8d9552e, type: 3}
-    spawnWeight: 7
-  - fruitPrefab: {fileID: 5654466434300138898, guid: e604a0a06f0ad2f4588b7a1127b77381, type: 3}
+  - fruitPrefab: {fileID: 7474140428821586315, guid: 34cf324f7110d064e845766d34113843, type: 3}
+    spawnWeight: 10
+  - fruitPrefab: {fileID: 795270983976498974, guid: 9a03434e3f926434ebcadee6234467b7, type: 3}
+    spawnWeight: 8
+  - fruitPrefab: {fileID: 5238422677304050410, guid: bc38c1ee781559c4ebe168e9b6d18069, type: 3}
     spawnWeight: 6
-  - fruitPrefab: {fileID: 6849145136739177961, guid: 1f9bc2baa3eecbe48aaac571067bd966, type: 3}
-    spawnWeight: 5
-  - fruitPrefab: {fileID: 9003223963689281457, guid: dcfa150433e47994ebf8b1bc2346b4f9, type: 3}
-    spawnWeight: 4
-  - fruitPrefab: {fileID: 5182403206852857962, guid: b06ad6d962700de40a25e00ccd3b09c8, type: 3}
+  - fruitPrefab: {fileID: 6806420585747449944, guid: 7c80645aba524424b9200f1cf5ca18e3, type: 3}
     spawnWeight: 3
-  - fruitPrefab: {fileID: 5076765230915325859, guid: fe78d4afa3f68664fa71adf376f4aea6, type: 3}
-    spawnWeight: 2
-  - fruitPrefab: {fileID: 2705507177751519838, guid: 06e4910d9238ddb418ce390133ed7724, type: 3}
-    spawnWeight: 1
   dropHeight: 4
   leftBoundary: -3
   rightBoundary: 3
@@ -1219,7 +1213,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -10
   m_Sprite: {fileID: 5490865710386909873, guid: 1d32c2bf6621cb14897bd6d05c8a9eff, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1280,8 +1274,8 @@ EdgeCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0
+  m_Offset: {x: 0, y: -0.09}
+  m_EdgeRadius: 0.03
   m_Points:
   - {x: -3.0698268, y: 1.8736984}
   - {x: -3.1855857, y: 1.5624621}
