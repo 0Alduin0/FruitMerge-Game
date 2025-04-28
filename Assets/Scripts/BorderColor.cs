@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class renk : MonoBehaviour
+public class BorderColor : MonoBehaviour
 {
     [Header("Ayarlar")]
     public float parlatmaHizi = 2f; // Renk deðiþim hýzý

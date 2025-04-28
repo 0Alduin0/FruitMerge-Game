@@ -2089,9 +2089,9 @@ GameObject:
   - component: {fileID: 1690478539}
   - component: {fileID: 1690478542}
   - component: {fileID: 1690478541}
-  - component: {fileID: 1690478540}
+  - component: {fileID: 1690478543}
   m_Layer: 5
-  m_Name: Image
+  m_Name: BorderUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2116,21 +2116,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 117}
   m_SizeDelta: {x: 110, y: 160}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1690478540
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1690478538}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a57ea5d55879ecf4ea9be8bb2a9152da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  parlatmaHizi: 2
-  minParlaklik: 0.7
-  maxParlaklik: 1
 --- !u!114 &1690478541
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2169,6 +2154,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1690478538}
   m_CullTransparentMesh: 1
+--- !u!114 &1690478543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1690478538}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0dba770b05f44844f82b75b2cf11ff61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parlatmaHizi: 2
+  minParlaklik: 0.7
+  maxParlaklik: 1
 --- !u!1 &1802703242
 GameObject:
   m_ObjectHideFlags: 0
