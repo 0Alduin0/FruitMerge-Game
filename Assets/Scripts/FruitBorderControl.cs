@@ -37,7 +37,6 @@ public class FruitBorderControl : MonoBehaviour
         if (sayacAktif)
         {
             mevcutSayac -= Time.deltaTime;
-            Debug.Log(Mathf.FloorToInt(mevcutSayac));
 
             // UI Text güncelleme
             if (sayacText != null)

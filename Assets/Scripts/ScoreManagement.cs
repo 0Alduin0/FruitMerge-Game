@@ -33,7 +33,6 @@ public class ScoreManagement : MonoBehaviour
     }
     private void Update()
     {
-        Debug.Log(score);
     }
     // Diðer script'lerden çaðýrýlacak metod
     public void AddScore(string fruitTag)
