@@ -12,13 +12,15 @@ public class ScoreManagement : MonoBehaviour
     // Meyve tag'lerine göre puanlar
     private Dictionary<string, int> fruitScores = new Dictionary<string, int>()
     {
-        {"Blueberry", 50},
-        {"Grapes", 100},
-        {"Banana", 150},
-        {"Apple", 200},
-        {"Orange", 250},
-        {"Pear", 300},
-        {"Strawberry", 500}
+        {"Plum",50},
+        {"Strawberry", 100},
+        {"Grapes", 200},
+        {"Lemon", 250},
+        {"Apple", 400},
+        {"Orange", 450},
+        {"Peach", 500},
+        {"Coconut", 700},
+        {"Watermelon", 1000},
     };
 
     private void Awake()
