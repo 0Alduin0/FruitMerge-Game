@@ -3,6 +3,12 @@ using UnityEngine;
 
 public class FruitDrop : MonoBehaviour
 {
+    public static FruitDrop Instance;
+    private void Awake()
+    {
+        Instance = this;
+    }
+
     [System.Serializable] // Inspector'da görünebilir hale getirir
     public class WeightedFruit
     {
