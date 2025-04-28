@@ -21,7 +21,6 @@ public class FruitBorderControl : MonoBehaviour
             sayacAktif = true;
             mevcutSayac = sayacSuresi;
 
-            Debug.Log("Meyve bardak aðzýna deðdi, sayac baþladý!");
         }
     }
 
@@ -49,7 +48,6 @@ public class FruitBorderControl : MonoBehaviour
             // Sayac tamamlandýðýnda
             if (mevcutSayac <= 0)
             {
-                Debug.Log("sayaç 0 oldu");
             }
         }
     }
@@ -64,6 +62,5 @@ public class FruitBorderControl : MonoBehaviour
             sayacText.text = "";
         }
 
-        Debug.Log("Sayac sýfýrlandý");
     }
 }
