@@ -7,7 +7,7 @@ public class LostMenu : MonoBehaviour
     {
         lostMenu.SetActive(false);
         FruitDrop.Instance.clearAllFruits();
-        //FruitDrop.Instance.StartNewGame();
+        FruitDrop.Instance.StartNewGame();
     }
     public void QuitGame()
     {

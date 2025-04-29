@@ -29,20 +29,21 @@ public class FruitDrop : MonoBehaviour
 
     public bool hasGameStarted = false;
 
-
     void Start()
     {
         mainCamera = Camera.main;
     }
-    public void StartNewGame()
+    public void StartGame()
     {
         hasGameStarted = true;
         Time.timeScale = 1f;
-        GameObject bowl = GameObject.FindGameObjectWithTag("Bowl");
-        foreach (Transform child in bowl.transform)
-        {
-            Destroy(child.gameObject);
-        }
+        SpawnNewFruit();
+    }
+    public void StartNewGame()
+    {
+        clearAllFruits();
+        Time.timeScale = 1f;
+        hasGameStarted = true;
         SpawnNewFruit();
     }
     public void clearAllFruits()
