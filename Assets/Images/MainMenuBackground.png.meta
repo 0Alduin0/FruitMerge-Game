@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: f0201d67981e32a4f845253b2997f14b
+guid: f60ab4f94bb54f9448078ca692af23b8
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 943007593568311311
-    second: "Ekran g\xF6r\xFCnt\xFCs\xFC 2025-04-29 141208_0"
+      213: 588236727493506795
+    second: "Ekran g\xF6r\xFCnt\xFCs\xFC 2025-04-29 203123_0"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,12 +113,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "Ekran g\xF6r\xFCnt\xFCs\xFC 2025-04-29 141208_0"
+      name: "Ekran g\xF6r\xFCnt\xFCs\xFC 2025-04-29 203123_0"
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1490
+        width: 1491
         height: 827
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f08922bf86c361d00800000000000000
-      internalID: 943007593568311311
+      spriteID: be6b612ef26d92800800000000000000
+      internalID: 588236727493506795
       vertices: []
       indices: 
       edges: []
@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      "Ekran g\xF6r\xFCnt\xFCs\xFC 2025-04-29 203123_0": 588236727493506795
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
