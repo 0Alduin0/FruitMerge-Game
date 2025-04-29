@@ -10,6 +10,8 @@ public class Merge : MonoBehaviour
     public GameObject mergeEffect;
     public AudioManager audioManager;
 
+
+
     private void Awake()
     {
         audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
@@ -51,11 +53,14 @@ public class Merge : MonoBehaviour
 
                 Destroy(collision.gameObject);
                 Destroy(gameObject);
-                Instantiate(mergeEffect, mergePosition, Quaternion.identity);
+                GameObject smokeEffect = Instantiate(mergeEffect, mergePosition, Quaternion.identity);
+                Destroy(smokeEffect, 3f);
                 GameObject nextFruit = mergeHierarchy[currentTag];
                 if (nextFruit != null)
                 {
-                    Instantiate(nextFruit, mergePosition, Quaternion.identity);
+                    GameObject instantiateFruit = Instantiate(nextFruit, mergePosition, Quaternion.identity);
+                    GameObject bowl = GameObject.FindGameObjectWithTag("Bowl");
+                    instantiateFruit.transform.SetParent(bowl.transform);
                 }
             }
         }

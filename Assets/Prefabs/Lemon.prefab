@@ -310,3 +310,4 @@ MonoBehaviour:
   - {fileID: 4745588449503523389, guid: e4a201462ef700e49b3676270813f586, type: 3}
   mergeEffect: {fileID: 1405091850241023083, guid: 070938e3d30050f448406a1319a31ae4, type: 3}
   audioManager: {fileID: 0}
+  bowl: {fileID: 0}

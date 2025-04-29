@@ -1,4 +1,6 @@
+using NUnit.Framework;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class FruitDrop : MonoBehaviour
@@ -94,6 +96,8 @@ public class FruitDrop : MonoBehaviour
         spawnPosition.x = Mathf.Clamp(spawnPosition.x, leftBoundary, rightBoundary);
 
         currentFruit = Instantiate(selectedFruit, spawnPosition, Quaternion.identity);
+        GameObject bowl = GameObject.FindGameObjectWithTag("Bowl");
+        currentFruit.transform.SetParent(bowl.transform);
         currentFruit.GetComponent<Rigidbody2D>().gravityScale = 0f;
         canDrop = true;
     }
