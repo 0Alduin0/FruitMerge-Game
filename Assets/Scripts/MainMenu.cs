@@ -6,7 +6,7 @@ public class MainMenu : MonoBehaviour
     public void StartGame()
     {
         mainMenu.SetActive(false);
-        FruitDrop.Instance.StartGame();
+        FruitDrop.Instance.StartNewGame();
     }
     public void QuitGame()
     {

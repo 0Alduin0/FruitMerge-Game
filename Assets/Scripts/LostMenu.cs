@@ -3,10 +3,11 @@ using UnityEngine;
 public class LostMenu : MonoBehaviour
 {
     public GameObject lostMenu;
-    public void NewGame()
+    public void StartGame()
     {
         lostMenu.SetActive(false);
-        FruitDrop.Instance.StartGame();
+        FruitDrop.Instance.clearAllFruits();
+        //FruitDrop.Instance.StartNewGame();
     }
     public void QuitGame()
     {
