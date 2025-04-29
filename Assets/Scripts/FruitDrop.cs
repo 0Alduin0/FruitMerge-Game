@@ -25,15 +25,20 @@ public class FruitDrop : MonoBehaviour
     private Camera mainCamera;
     private bool canDrop = true;
 
+    public bool hasGameStarted=false;
+
     void Start()
     {
         mainCamera = Camera.main;
+    }
+    public void StartGame()
+    {
+        hasGameStarted = true;
         SpawnNewFruit();
     }
-
     void Update()
     {
-        if (currentFruit != null)
+        if (currentFruit != null && hasGameStarted == true)
         {
             Vector3 mousePosition = Input.mousePosition;
             mousePosition.z = 10f;

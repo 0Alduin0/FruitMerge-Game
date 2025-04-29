@@ -1778,7 +1778,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 883409941}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1603512852}
+        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
+        m_MethodName: StartGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &883409941
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3405,10 +3417,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1603512850}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 501b07e0df0fac64197d127ada4b01ff, type: 3}
+  m_Script: {fileID: 11500000, guid: ffb01d0132cde3344871f3124745e328, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pauseMenu: {fileID: 1656436403}
+  mainMenu: {fileID: 1603512850}
 --- !u!1 &1641728019
 GameObject:
   m_ObjectHideFlags: 0
@@ -3588,7 +3600,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1690478539
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3743,7 +3755,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1761080332}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1603512852}
+        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
+        m_MethodName: QuitGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1761080332
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3839,6 +3863,7 @@ MonoBehaviour:
   dropHeight: 4
   leftBoundary: -3
   rightBoundary: 3
+  hasGameStarted: 0
 --- !u!114 &1802703246
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4065,7 +4090,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1999120805
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4267,7 +4292,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2048205132}
-  - component: {fileID: 2048205133}
   m_Layer: 5
   m_Name: LostScreen
   m_TagString: Untagged
@@ -4298,19 +4322,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 1, y: 0.5}
---- !u!114 &2048205133
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2048205131}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 501b07e0df0fac64197d127ada4b01ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pauseMenu: {fileID: 1656436403}
 --- !u!1 &2079154482
 GameObject:
   m_ObjectHideFlags: 0
