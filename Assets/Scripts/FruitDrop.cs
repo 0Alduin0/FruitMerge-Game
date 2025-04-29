@@ -25,7 +25,7 @@ public class FruitDrop : MonoBehaviour
     private Camera mainCamera;
     private bool canDrop = true;
 
-    public bool hasGameStarted=false;
+    public bool hasGameStarted = false;
 
     void Start()
     {
@@ -34,6 +34,7 @@ public class FruitDrop : MonoBehaviour
     public void StartGame()
     {
         hasGameStarted = true;
+        Time.timeScale = 1f;
         SpawnNewFruit();
     }
     void Update()

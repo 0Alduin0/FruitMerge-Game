@@ -2732,6 +2732,7 @@ MonoBehaviour:
   mevcutSayac: 0
   sayacAktif: 0
   temasEdenMeyve: {fileID: 0}
+  lostMenu: {fileID: 2048205131}
 --- !u!61 &1351951550
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2930,7 +2931,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1488454956}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2048205133}
+        m_TargetAssemblyTypeName: LostMenu, Assembly-CSharp
+        m_MethodName: QuitGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1488454956
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3518,10 +3531,10 @@ RectTransform:
   - {fileID: 2132732494}
   - {fileID: 1690478539}
   - {fileID: 1574329595}
-  - {fileID: 1656436404}
   - {fileID: 1999120805}
-  - {fileID: 1603512851}
   - {fileID: 2048205132}
+  - {fileID: 1656436404}
+  - {fileID: 1603512851}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -4035,7 +4048,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1997708729}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2048205133}
+        m_TargetAssemblyTypeName: LostMenu, Assembly-CSharp
+        m_MethodName: NewGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1997708729
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4292,6 +4317,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2048205132}
+  - component: {fileID: 2048205133}
   m_Layer: 5
   m_Name: LostScreen
   m_TagString: Untagged
@@ -4322,6 +4348,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 1, y: 0.5}
+--- !u!114 &2048205133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2048205131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3de806f5833cad48b239d03f008d8f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lostMenu: {fileID: 2048205131}
 --- !u!1 &2079154482
 GameObject:
   m_ObjectHideFlags: 0

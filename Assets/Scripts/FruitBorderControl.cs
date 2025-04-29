@@ -13,6 +13,8 @@ public class FruitBorderControl : MonoBehaviour
     [SerializeField] private bool sayacAktif = false;
     [SerializeField] private GameObject temasEdenMeyve;
 
+    public GameObject lostMenu;
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (sayacAktif == false)
@@ -47,6 +49,8 @@ public class FruitBorderControl : MonoBehaviour
             // Sayac tamamlandýðýnda
             if (mevcutSayac <= 0)
             {
+                lostMenu.SetActive(true);
+                Time.timeScale = 0f;
             }
         }
     }
