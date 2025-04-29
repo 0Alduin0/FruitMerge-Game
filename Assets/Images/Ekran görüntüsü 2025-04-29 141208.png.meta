@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 1d32c2bf6621cb14897bd6d05c8a9eff
+guid: f0201d67981e32a4f845253b2997f14b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5490865710386909873
-    second: bowl (2)_0
+      213: 943007593568311311
+    second: "Ekran g\xF6r\xFCnt\xFCs\xFC 2025-04-29 141208_0"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: bowl (2)_0
+      name: "Ekran g\xF6r\xFCnt\xFCs\xFC 2025-04-29 141208_0"
       rect:
         serializedVersion: 2
-        x: 95
-        y: 358
-        width: 663
-        height: 488
+        x: 0
+        y: 0
+        width: 1490
+        height: 827
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1b21cf09549733c40800000000000000
-      internalID: 5490865710386909873
+      spriteID: f08922bf86c361d00800000000000000
+      internalID: 943007593568311311
       vertices: []
       indices: 
       edges: []
