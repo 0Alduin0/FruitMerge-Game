@@ -3,6 +3,10 @@ using UnityEngine;
 public class MainMenu : MonoBehaviour
 {
     public GameObject mainMenu;
+    private void Start()
+    {
+        Time.timeScale = 0f;
+    }
     public void StartGame()
     {
         mainMenu.SetActive(false);

@@ -1,4 +1,3 @@
-using NUnit.Framework;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -11,14 +10,14 @@ public class FruitDrop : MonoBehaviour
         Instance = this;
     }
 
-    [System.Serializable] // Inspector'da görünebilir hale getirir
+    [System.Serializable]
     public class WeightedFruit
     {
         public GameObject fruitPrefab;
-        public float spawnWeight; // Spawn olasýlýðýný belirler (örneðin: elma=5, çilek=1)
+        public float spawnWeight;
     }
 
-    public List<WeightedFruit> weightedFruits; // Aðýrlýklý meyve listesi
+    public List<WeightedFruit> weightedFruits;
     public float dropHeight = 5f;
     public float leftBoundary = -5f;
     public float rightBoundary = 5f;
@@ -26,26 +25,38 @@ public class FruitDrop : MonoBehaviour
     private GameObject currentFruit;
     private Camera mainCamera;
     private bool canDrop = true;
-
     public bool hasGameStarted = false;
 
     void Start()
     {
         mainCamera = Camera.main;
     }
+
     public void StartGame()
     {
+        if (hasGameStarted) return;
+
         hasGameStarted = true;
         Time.timeScale = 1f;
         SpawnNewFruit();
     }
+
     public void StartNewGame()
     {
         clearAllFruits();
+
+        if (currentFruit != null)
+        {
+            Destroy(currentFruit);
+            currentFruit = null;
+        }
+
         Time.timeScale = 1f;
         hasGameStarted = true;
         SpawnNewFruit();
+        CancelInvoke("SpawnNewFruit");
     }
+
     public void clearAllFruits()
     {
         GameObject bowl = GameObject.FindGameObjectWithTag("Bowl");
@@ -54,9 +65,17 @@ public class FruitDrop : MonoBehaviour
             Destroy(child.gameObject);
         }
     }
+
     void Update()
     {
-        if (currentFruit != null && hasGameStarted == true)
+        if (!hasGameStarted) return;
+
+        if (currentFruit == null && !IsInvoking("SpawnNewFruit"))
+        {
+            Invoke("SpawnNewFruit", 0.5f);
+        }
+
+        if (currentFruit != null)
         {
             Vector3 mousePosition = Input.mousePosition;
             mousePosition.z = 10f;
@@ -74,22 +93,14 @@ public class FruitDrop : MonoBehaviour
 
     void SpawnNewFruit()
     {
-        if (weightedFruits.Count == 0) return;
+        if (weightedFruits.Count == 0 || currentFruit != null) return;
 
-        // Toplam aðýrlýðý hesapla
-        float totalWeight = 0f;
-        foreach (var weightedFruit in weightedFruits)
-        {
-            totalWeight += weightedFruit.spawnWeight;
-        }
-
-        // Rastgele bir deðer seç (0 ile totalWeight arasýnda)
+        float totalWeight = weightedFruits.Sum(w => w.spawnWeight);
         float randomValue = Random.Range(0f, totalWeight);
         float weightSum = 0f;
 
-        GameObject selectedFruit = null;
+        GameObject selectedFruit = weightedFruits[0].fruitPrefab; // Varsayýlan
 
-        // Hangi meyvenin seçileceðini belirle
         foreach (var weightedFruit in weightedFruits)
         {
             weightSum += weightedFruit.spawnWeight;
@@ -100,12 +111,6 @@ public class FruitDrop : MonoBehaviour
             }
         }
 
-        if (selectedFruit == null)
-        {
-            selectedFruit = weightedFruits[0].fruitPrefab; // Fallback
-        }
-
-        // Yeni meyveyi oluþtur
         Vector3 spawnPosition = mainCamera.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 10f));
         spawnPosition.y = dropHeight;
         spawnPosition.x = Mathf.Clamp(spawnPosition.x, leftBoundary, rightBoundary);
@@ -119,6 +124,8 @@ public class FruitDrop : MonoBehaviour
 
     void DropFruit()
     {
+        if (currentFruit == null) return;
+
         if (currentFruit.GetComponent<Rigidbody2D>() != null)
         {
             currentFruit.GetComponent<Rigidbody2D>().gravityScale = 2f;
@@ -126,6 +133,5 @@ public class FruitDrop : MonoBehaviour
 
         canDrop = false;
         currentFruit = null;
-        Invoke("SpawnNewFruit", 0.5f);
     }
 }

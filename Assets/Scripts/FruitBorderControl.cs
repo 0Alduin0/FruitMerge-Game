@@ -49,8 +49,8 @@ public class FruitBorderControl : MonoBehaviour
             // Sayac tamamlandýðýnda
             if (mevcutSayac <= 0)
             {
-                lostMenu.SetActive(true);
                 Time.timeScale = 0f;
+                lostMenu.SetActive(true);
             }
         }
     }
