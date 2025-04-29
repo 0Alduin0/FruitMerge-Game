@@ -31,16 +31,6 @@ public class FruitDrop : MonoBehaviour
     {
         mainCamera = Camera.main;
     }
-
-    public void StartGame()
-    {
-        if (hasGameStarted) return;
-
-        hasGameStarted = true;
-        Time.timeScale = 1f;
-        SpawnNewFruit();
-    }
-
     public void StartNewGame()
     {
         clearAllFruits();
@@ -55,6 +45,7 @@ public class FruitDrop : MonoBehaviour
         hasGameStarted = true;
         SpawnNewFruit();
         CancelInvoke("SpawnNewFruit");
+        ScoreManagement.Instance.scoreAdjustment();
     }
 
     public void clearAllFruits()

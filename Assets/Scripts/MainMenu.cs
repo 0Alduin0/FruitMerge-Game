@@ -11,7 +11,7 @@ public class MainMenu : MonoBehaviour
     {
         mainMenu.SetActive(false);
         FruitDrop.Instance.clearAllFruits();
-        FruitDrop.Instance.StartGame();
+        FruitDrop.Instance.StartNewGame();
     }
     public void QuitGame()
     {

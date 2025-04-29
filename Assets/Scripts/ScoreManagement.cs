@@ -29,10 +29,12 @@ public class ScoreManagement : MonoBehaviour
     }
     private void Start()
     {
-        scoreText.text = score.ToString();
+        scoreAdjustment();
     }
-    private void Update()
+    public void scoreAdjustment()
     {
+        score = 0;
+        scoreText.text = score.ToString();
     }
     // Diðer script'lerden çaðýrýlacak metod
     public void AddScore(string fruitTag)
