@@ -8,7 +8,7 @@ public class MainMenu : MonoBehaviour
 
     private void Start()
     {
-        Time.timeScale = 0f;
+        Time.timeScale = 1f;
     }
     public void StartGame()
     {
