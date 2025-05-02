@@ -7,6 +7,8 @@ public class ScoreManagement : MonoBehaviour
     public static ScoreManagement Instance;
     public float score = 0;
     public TextMeshProUGUI scoreText;
+    public TextMeshProUGUI highscoreText;
+    public float highScore;
 
 
     // Meyve tag'lerine göre puanlar
@@ -35,6 +37,7 @@ public class ScoreManagement : MonoBehaviour
     {
         score = 0;
         scoreText.text = score.ToString();
+        highscoreText.text = PlayerPrefs.GetFloat("HighScore").ToString();
     }
     // Diðer script'lerden çaðýrýlacak metod
     public void AddScore(string fruitTag)
@@ -43,6 +46,12 @@ public class ScoreManagement : MonoBehaviour
         {
             score += fruitScores[fruitTag];
             scoreText.text = score.ToString();
+            if (score >= PlayerPrefs.GetFloat("HighScore"))
+            {
+                highScore = score;
+                highscoreText.text = highScore.ToString();
+                PlayerPrefs.SetFloat("HighScore", highScore);
+            }
         }
     }
 }
