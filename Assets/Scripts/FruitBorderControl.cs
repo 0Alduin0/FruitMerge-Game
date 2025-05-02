@@ -18,6 +18,7 @@ public class FruitBorderControl : MonoBehaviour
 
     public GameObject lostMenu;
     public GameObject countDownUI;
+
     private void Start()
     {
         countDownUI.SetActive(false);
