@@ -19,6 +19,8 @@ public class FruitBorderControl : MonoBehaviour
     public GameObject lostMenu;
     public GameObject countDownUI;
 
+    public TextMeshProUGUI ScoreText;
+
     private void Start()
     {
         countDownUI.SetActive(false);
@@ -74,6 +76,7 @@ public class FruitBorderControl : MonoBehaviour
             {
                 Time.timeScale = 0f;
                 lostMenu.SetActive(true);
+                ScoreText.text = "Score: " + ScoreManagement.Instance.score.ToString();
             }
         }
     }

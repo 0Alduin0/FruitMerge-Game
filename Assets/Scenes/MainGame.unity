@@ -3132,6 +3132,7 @@ MonoBehaviour:
   temasEdenMeyve: {fileID: 0}
   lostMenu: {fileID: 2048205131}
   countDownUI: {fileID: 1958262472}
+  ScoreText: {fileID: 48522989}
 --- !u!1 &1488454953
 GameObject:
   m_ObjectHideFlags: 0
