@@ -1,0 +1,7 @@
+# C# dosyaları ana dil olarak tanımlansın
+*.cs linguist-language=C#
+
+# Shader dosyaları sayılmasın (sadece örnek gibi kabul edilsin)
+*.shader linguist-vendored
+*.cginc linguist-vendored
+*.hlsl linguist-vendored
